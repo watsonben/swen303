@@ -14,3 +14,12 @@ To make everything easier, executing the following will mean that in the future,
 ```
 git branch --set-upstream-to=origin/master master
 ```
+### Step 2
+For ease of coding, create your own branch upon creation so not everyone is modifying master at once. This simply avoids unnecessary merge conflicts.
+```
+git checkout -b <branch name>
+```
+For example:
+```
+git checkout -b the-branch-of-ben
+```
