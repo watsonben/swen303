@@ -17,7 +17,7 @@ git branch --set-upstream-to=origin/master master
 ### Step 2
 For ease of coding, create your own branch upon creation so not everyone is modifying master at once. This simply avoids unnecessary merge conflicts.
 ```
-git checkout -b <branch name>
+git checkout -b <branch name you want to create>
 ```
 For example:
 ```
