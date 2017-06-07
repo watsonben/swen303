@@ -23,3 +23,10 @@ For example:
 ```
 git checkout -b the-branch-of-ben
 ```
+
+## Style guidelines for pages
+The Victoria university color is officially a dark green (#115737) so try to use this where possible as the foreground color.
+
+The background image we're using is located in the img folder, and is called header.png (for now... this may change). This is what's going to be used as a default background persisting throughout pretty much the whole app, though at times there will be stuff on top of it. Alternatively to this background, use a white/gray color (#f7f7f7) to back the foreground text (eg. in the navbar).
+
+We're going to be developing this for an ipad platform (though there is no functionality) so in your developer tools view this as a horizontal ipad (push f12 and then click the little square on a bigger square in the upper left corner of the screen to turn the device toolbar on, and then refresh the page and select 'ipad' from the dropdown menu. You may need to change the orientation to landscape as well).

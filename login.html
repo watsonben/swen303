@@ -33,6 +33,17 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+		<style>
+input[type=email], input[type=password], .btn-primary{
+	width: 258px !important;
+	margin: auto !important;
+	border: 0.5px solid black !important;
+}
+a{
+	color: #115737 !important;
+}
+		</style>
+
 	</head>
 
 	<body id="page-top">
@@ -44,19 +55,19 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="text" placeholder="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					<input class="form-control mr-sm-2" type="text" placeholder="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #115737">Search</button>
 				</form>
 			</div>
 		</nav>
@@ -69,9 +80,9 @@
 					<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 					<label for="inputPassword" class="sr-only">Password</label>
 					<input type="password" id="inputPassword" class="form-control" placeholder="Password" required style="width: 200px;">
-					<button type="button" class="btn btn-primary btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
-					 Remember Me
-					</button>
+					<input class="w3-check" type="checkbox">
+					<label>Remember me!</label>
+					<p></p>
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 				</form>
 			</div> 
@@ -79,9 +90,9 @@
 
 
 		<!-- jQuery -->
-		
+
 		<!-- Bootstrap Core JavaScript -->
-		
+
 
 		<!-- Plugin JavaScript -->
 		<script src="js/jquery.easing.min.js"></script>
