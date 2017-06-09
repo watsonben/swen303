@@ -184,6 +184,8 @@ header {
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 header .header-content {
