@@ -54,7 +54,9 @@
 				padding: 50px 50px;
 				text-align: left;
 			}
-
+			tr.bg-primary {
+				background-color: #fff !important;
+			}
 		</style>
 
 	</head>
@@ -114,9 +116,34 @@
 					<hr>
 				</div>
 				<h2>Timetable</h2>
-				<div class="header-content-inner">	
-					<h1>#TODO</h1>
+				<div class="header-content-inner">
+					<div class="container">		
+					<table class="table table-hover">
+						<thead>
+							<tr>
+							<th>Time</th>
+							<th>Date</th>
+							<th>What</th>
+							<th>Course</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							<th scope="row">8:00 Am</th>
+							<td>12/5/17</td>
+							<td>Lecture</td>
+							<td>SWEN303</td>
+							</tr>
+							<tr>
+							<th scope="row">10:00 Am</th>
+							<td>12/05/17</td>
+							<td>Assignment Due</td>
+							<td>SWEN303</td>
+							</tr>
+						</tbody>
+						</table>
 					<hr>
+					</div>
 				</div>
 			</div>	
 		</header>
