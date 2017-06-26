@@ -7,8 +7,8 @@
       <meta name="description" content="ECS mobile app">
       <meta name="author" content="Ben Watson, Reuben Lovell-Smith, Zoe Kraemer">
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
       <title>Victoria - ECS</title>
       <!-- Custom Fonts -->
       <script src="https://use.fontawesome.com/329f50a5bf.js"></script>
@@ -109,16 +109,16 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
-                  <a class="nav-link" href="#">My Courses<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="courses-signedin.html">My Courses<span class="sr-only">(current)</span></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="about.html">About</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Forums</a>
+                  <a class="nav-link" href="forums_home.html">Forums</a>
                </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0" action="search.html">
                <input class="form-control mr-sm-2" type="text" placeholder="Search">
                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
             </form>
@@ -126,11 +126,9 @@
       </nav>
       <header>
 	  <div class="header-content-inner">
-					<div class="alert alert-warning alert-dismissible fade show" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						SWEN303:  <strong>Assignment 2 marks are out!</strong> You should check them out.
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+						<span class="close" data-dismiss="alert">&times;</span>
+						SWEN303:  <strong>Assignment 2 marks are out!</strong> Have a look.
 					</div>
 				</div>
 		
@@ -176,19 +174,19 @@
 			</h2>
             <h3>Latest:</h3>
             <p>
-               88% in Crse202 Project 1 - See feedback <a href="#">here</a>
+               88% in Crse202 Project 1 - See feedback <a href="#" style="border-bottom: 1px solid white;">here</a>
             </p>
 		 </div>
          </div>
       </header>
       <!-- jQuery -->
-      <!-- Bootstrap Core JavaScript -->
       <!-- Plugin JavaScript -->
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/jquery.fittext.js"></script>
       <script src="js/wow.min.js"></script>
       <!-- Custom Theme JavaScript -->
       <script src="js/creative.js"></script>
+      <!-- Bootstrap Core JavaScript -->
    </body>
 </html>
 <!-- style stuff?

@@ -63,18 +63,18 @@ nav{
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Courses<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="courses-signedout.html">Courses<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">About us</a>
+						<a class="nav-link" href="about.html">About us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">News</a>
+						<a class="nav-link" href="news.html">News</a>
 					</li>
 				</ul>
-				<form class="form-inline my-2 my-lg-0">
+				<form class="form-inline my-2 my-lg-0" action="search.html">
 					<input class="form-control mr-sm-2" type="text" placeholder="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #115737">Search</button>
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
 				</form>
 			</div>
 		</nav>
@@ -105,11 +105,21 @@ input[type=password]{
 					<label for="inputPassword" class="sr-only">Password</label>
 					<input type="password" id="inputPassword" class="form-control" placeholder="Password" required style="width: 200px;">
 					<input class="check" type="checkbox"><label>Remember me!</label>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+					<button class="btn btn-lg btn-primary btn-block" type="button" onclick="signIn()">Sign in</button>
 				</form>
 			</div> 
 		</header>
-
+		<script>
+		function signIn(){
+			username = document.getElementById('inputEmail').value;
+			if(username == "admin@admin.com"){
+				window.location.href = "admin_home.html";
+			}
+			else{
+				window.location.href = "student_home.html";
+			}
+		}
+		</script>
 
 		<!-- jQuery -->
 
