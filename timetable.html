@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="ECS mobile app">
+		<meta name="author" content="Ben Watson, Reuben Lovell-Smith, Zoe Kraemer">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<title>Victoria - ECS</title>
+		<!-- Custom Fonts -->
+		<script src="https://use.fontawesome.com/329f50a5bf.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<!-- Plugin CSS -->
+		<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/creative.css" type="text/css">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/2.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+input[type=email], input[type=password], .btn-primary{
+	width: 258px !important;
+	margin: auto !important;
+}
+
+		 input[type=text]{
+		 }
+
+		 a{
+			 color: #e7e7e7 !important;
+		 }
+
+		 h1, h2, h3, p{ 	
+			 text-align: left !important;
+			 margin-left: 100px !important;
+			 margin-right: 100px !important;
+		 } 
+
+		 h2{
+			 margin-top: 40px;
+		 }
+
+		 h1{
+			 margin-top: 550px;
+			 border-bottom: thin solid #f7f7f7 !important;
+			 margin-bottom: 50px !important;
+		 } 
+
+		 p{ 	
+			 margin-left: 150px !important; 	
+			 margin-right: 100px !important;
+			 margin-bottom: 30px !important;
+		 }
+
+		 nav{
+			 color: #e7e7e7 !important;
+			 background-color: #115737 !important;
+		 }
+
+		 header{
+			 overflow: scroll;
+		 }
+
+		 .navbar-fixed-top{
+			 position: fixed;
+			 width: 100%;
+			 top: 0;
+			 z-index: 1;
+		 }
+
+		 .navbar-brand {
+			 font-size: 170%;
+		 }
+
+		 .check{
+			 width: 12px;
+			 position: relative;
+			 margin-top: 5px;
+			 margin-bottom: 5px;
+			 margin-left: -114px;
+			 margin-right: 7px;
+			 height: 12px;
+			 top: 0;
+			 left: 0;
+			 border-radius: 4px;
+			 box-shadow: none;
+		 }
+
+		 input[type=password]{
+			 margin-top: 5px !important;
+		 }
+
+		</style>
+	</head>
+	<body id="page-top">
+		<nav class="navbar navbar-toggleable-md navbar-light navbar-fixed-top">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#">Victoria</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">My Courses<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Forums</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
+				</form>
+			</div>
+		</nav>
+<style>
+.header-content{
+	margin-top: -70px;
+}
+.timeline-item {
+	padding: 35px 30px 1px;
+	position: relative;
+	color: rgba(#115737, .7);
+	border-left: 1px solid #e7e7e7;
+	margin-left: 100px;
+}
+	.timeline-item::before {
+		top: 9px;
+		content: attr(date-is);
+		position: absolute;
+		left: 30px;;
+		font-weight: bold;
+		display: block;
+	}
+
+	.timeline-item::after {
+		width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -6px;
+		border-radius: 10px;
+		content: '';
+		border: 1px solid #e7e7e7;
+		background: #115737;
+	}
+	p{
+		margin-left: 20px !important;
+	}
+	.heading{
+		margin-top: -403px;
+	margin-left: 50px;
+	margin-right: 50px;
+	}
+
+table{
+	margin-left: 150px !important;
+	margin-right: 50px !important;
+	width: 725px !important;
+}
+td, th, tr{
+	padding: 5px 5px 5px 10px !important;
+}
+.table_and_heading{
+	margin-top: 300px;
+}
+</style>
+<header>
+	<div class="heading">
+		<h1>Timetable</h1>
+		<h3>Today:</h3>
+	</div>
+	<div>
+		<div class="header-content">
+			<div class="container">
+				<div class="timeline-item" date-is='Swen 303'>
+					<p>
+					Class - 10am in Co122
+					</p>
+				</div>
+				<div class="timeline-item" date-is='Crse 202'>
+					<p>
+					Lab - 11am in Co238
+					</p>
+				</div>
+				<div class="timeline-item" date-is='Thng 101'>
+					<p>
+					Class - 1pm in Mc103
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="table_and_heading">
+			<br>
+		<h3 style="margin-left:150px !important;">All:</h3>
+		<table class="table">
+    <tbody>
+        <tr class="table_header">
+          <th></th>
+            <td>Mon</td>
+            <td>Tue</td>
+            <td>Wed</td>
+            <td>Thu</td>
+            <td>Fri</td>
+        </tr>
+        <tr>
+          <th>9am</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <th>10am</th>
+            <td></td>
+			<td>Swen 303</td>
+            <td></td>
+            <td></td>
+            <td>Swen 303</td>
+        </tr>
+        <tr>
+          <th>11am</th>
+            <td>Crse 202</td>
+            <td>Crse 202</td>
+            <td></td>
+            <td>Crse 202</td>
+            <td></td>
+        </tr>
+        <tr>
+          <th>12pm</th>
+            <td></td>
+            <td></td>
+            <td>Thng 101</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <th>1pm</th>
+            <td></td>
+            <td>Thng 101</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <th>2pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <th>3pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td rowspan="2" style="vertical-align:middle;">Thng 101</td>
+        </tr>
+        <tr>
+          <th>4pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <th>5pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+	</div>
+</header>
+<!-- jQuery -->
+<!-- Bootstrap Core JavaScript -->
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+	</body>
+</html>
