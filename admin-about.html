@@ -119,11 +119,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Courses<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">My Courses<span class="sr-only">(current)</span></a>
                 </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Forums</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Post Anouncement</a>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">-->
@@ -131,10 +137,10 @@
             </form>
         </div>
     </nav>
-    <header>
+    <header >
 
 
-        <div class="header-content" style="margin-top: 20px;">
+        <div class="header-content">
 
             <!--<div class="entry">
                 <h2>
@@ -148,27 +154,71 @@
 
 
             <div class="entry">
-                <h1>
+                <h1 style="margin-top:50px;">
                     Admin Name                 
-                    <button type="button" class="btn btn-default" align="right">
+                    <button type="button" class="btn btn-default" align="right"  data-toggle="modal" data-target="#myModal" >
                         <span class="fa fa-pencil" aria-hidden="true"></span>
                         Edit
                     </button>
 
                 </h1>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                         <h2>Lectures:</h2>
-                        <button type="button" class="btn btn-default">
+                            <button type="button" class="btn btn-default">
                         <span class="fa fa-pencil" aria-hidden="true"></span>
                         Edit
-                    </button>
+                        </button>
+                        <h3>SWEN 303</h3>
+                        <h3>COMP 101</h3>
+
+                        <h2>Email:</h2>
+                            <button type="button" class="btn btn-default">
+                        <span class="fa fa-pencil" aria-hidden="true"></span>
+                            EDIT
+                        </button>
+                        <h3>Lecturer@ecs.vuw.nz</h3>
 
                     </div>
-                    <div class="col" align="right">
-                        <img src="img/jamesNoble.jpg" style="width: 50%;">
+                    <div class="col-md-6" align="center">
+                        <img src="img/jamesNoble.jpg" style="width: 60%;">
 
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Phone:</h2>
+                            <button type="button" class="btn btn-default">
+                        <span class="fa fa-pencil" aria-hidden="true"></span>
+                        Edit
+                        </button>
+                        <h3>0800 0010011</h3>
+                        <h3> </h3>
+                        <h3> </h3>
+                    </div>
+                    <div class="col-md-6">
+                    <h2>Office:</h2>
+                            <button type="button" class="btn btn-default">
+                        <span class="fa fa-pencil" aria-hidden="true"></span>
+                            EDIT
+                        </button>
+                        <h3>CO238</h3>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        
+                        <h2>About:</h2>
+                            <button type="button" class="btn btn-default">
+                        <span class="fa fa-pencil" aria-hidden="true"></span>
+                            EDIT
+                        </button>
+                        <h3>Short paragraph about Lecturer and some more stuff etc...</h3>
+                        <h3>Proin gravida tempor est, vitae ullamcorper magna semper quis.
+Vivamus nisi ligula, molestie sed elementum sed, tempor ac leo. Sed ac imperdiet arcu, sit amet
+tempus quam. Quisque ornare tempus dui eu euismod. Praesent at sem dolor. Aenean aliquam
+sollicitudin magna, vel ornare tellus cursus sed</h3>
                 </div>
 
             </div>
@@ -177,6 +227,29 @@
 
 
     </header>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Admin Name">
+                <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Admin</button>-->
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <!-- jQuery -->
