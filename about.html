@@ -13,7 +13,7 @@
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
-    <title>Victoria - ECS</title>
+    <title>Victoria - About</title>
     <!-- Custom Fonts -->
     <script src="https://use.fontawesome.com/329f50a5bf.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
@@ -52,7 +52,6 @@
         }
 
         h1 {
-            margin-top: 175px;
             border-bottom: thin solid #ffffff !important;
             margin-bottom: 50px;
         }
@@ -105,6 +104,11 @@
             padding: 5px 5px;
             text-align: left;
         }
+
+	.not-active{
+		pointer-events: none;
+		color: #b8b8b8 !important;
+	}
     </style>
 </head>
 
@@ -114,14 +118,14 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
          </button>
-        <a class="navbar-brand" href="student_home.html">Victoria</a>
+        <a class="navbar-brand" href="login.html">Victoria</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="courses-signedout.html">Courses<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="forums_home.html">Forums</a>
+                    <a class="nav-link not-active" href="#">About</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="search-results.html">
@@ -146,24 +150,12 @@
                 </div>
             </div>-->
        
-        <div class="header-content" style="margin-top: 40px;">
-            
-            <!--<div class="entry">
-                <h2>
-                    <a href="announcements.html">News?</a>
-                </h2>
-                <h3>Latest:</h3>
-                <p>
-                    Announcement One - This is important! A thing happened in class! Omg.
-                </p>
-            </div>-->
-
+        <div class="header-content" style="margin-top: 279px;">
             <div class="entry">
-                <h2>
-                    <a href="#">About Us</a>
-                </h2>
-                <h3> </h3>
-                <p>Learn to design and creatively apply emerging and established technology to solve problems with the School of Engineering and Computer Science.
+                <h1>
+                    About Us
+                </h1>
+                <p style="margin-left: 100px !important;">The School of Engineering and Computer Science is the information and technology base of the University. We teach design and creative application of both emerging and established technology with a focus on problem solving.<br><br>
 
 Our innovative and flexible programmes will prepare you for successful careers as digital engineers and computer scientists. Work with students from all over the world in an inspiring and supportive learning environment.</p>
                
@@ -171,20 +163,19 @@ Our innovative and flexible programmes will prepare you for successful careers a
             </div>
 
             <div class="entry">
-                <h2>
-                    <a href="#">Contact Details</a>
-                </h2>
+                <h1>
+                    Contact Details
+                </h1>
                 <div class="row">
-                <div class="col-6-auto">
-                <h3>Phone: 0800 VIC UNI</h3>
+                <div class="col-6-auto" style="margin-top: -20px; margin-left: -10px;">
+                <h3>Phone: 0800 Vic Uni</h3>
                 </div>
-                <div class="col-6-auto">
+                <div class="col-6-auto" style="margin-bottom: 30px; margin-top: -20px;margin-left: 60px !important;">
                 <h3>Email: ecs@ecs.vuw.ac.nz</h3>
                 
                 </div>
-                <h3>Map:</h3>
                 <div>
-                <img style="width:75%;height:75%;margin:auto;display:block;" src="img/kelburn-campus-map.jpg">
+                <img style="margin-left:115px; width:80%; height: 80%;display:block;" src="img/kelburn-campus-map.jpg">
                 </div>
                 </div>
                 
