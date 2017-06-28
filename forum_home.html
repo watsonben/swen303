@@ -153,8 +153,26 @@
                And this is the third most recent post. You get the idea by now. 
             </p>
 		 </div>
-         </div>
+         </div>	
       </header>
+	<nav class="navbar navbar-light fixed-bottom">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#new-topic">
+         		<span class="navbar-toggler-icon"></span>
+         	</button>
+		<a class="navbar-brand" href="#">+New Topic</a>
+		<div class="collapse" id="new-topic">
+		<form>
+		<div class="form-group">
+			<label for="title">Title:</label>
+			<input class="form-control" type="text" id="title">
+			<label for="body">Body:</label>
+			<textarea class="form-control" rows="5" id="body"></textarea>
+			<button class="btn btn-primary" type="submit">Create Topic</button>
+		</div>
+		</form>
+		</div>
+	</nav>
+
       <!-- jQuery -->
       <!-- Bootstrap Core JavaScript -->
       <!-- Plugin JavaScript -->
