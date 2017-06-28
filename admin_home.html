@@ -53,7 +53,6 @@
         }
 
         h1 {
-            margin-top: 175px;
             border-bottom: thin solid #ffffff !important;
             margin-bottom: 50px;
         }
@@ -119,35 +118,35 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">My Courses<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="admin-courses.html">My Courses<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
+                    <a class="nav-link" href="admin-about.html">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Forums</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Post Anouncement</a>
+                    <a class="nav-link" href="admin-forums-home.html">Forums</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">-->
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Admin</button>
+            <form class="form-inline my-2 my-lg-0" action="admin-search-results.html">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
+            </form>
+            <form class="form-inline my-2 my-lg-0" action="login.html">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Logout</button>
             </form>
         </div>
     </nav>
     <header>
 
 
-        <div class="header-content">
+        <div class="header-content" style="margin-top: 42px;">
             <div class="entry">
                 <h1>Welcome, Admin</h1>
             </div>
 
             <div class="entry">
                 <h2>
-                    <a href="timetable.html">Timetable</a>
+                    <a href="admin-timetable.html">Timetable</a>
                 </h2>
                 <h3>Next class:</h3>
                 <p>
@@ -156,79 +155,53 @@
             </div>
 
             <div class="entry">
-                <h2>
-                    <a href="assessments.html">Anounce:</a>
-                </h2>
-                <p> </p>
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <div class="row">
-                        <div class="col-md-8 offset-md-2">
-                            <textarea class="form-control" rows="6" placeholder="anouncement" required></textarea>
-                        </div>
-                        
+                <h1>
+                    Make announcement
+                </h1>
+	    </div>
+<style>
+textarea{
+	margin-left: -60px !important;
+	margin-top: -51px;
+	border-radius: 0px !important;
+	width: 726px !important;
+	border-color: white !important;
 
-                        </div>
-                        <div class="row">
-                        <div class="col-md-3 offset-md-2">
-                            <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" style="width:200px;" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Course
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">COMP121</button>
-                                <button class="dropdown-item" type="button">SWEN101</button>
-                                <button class="dropdown-item" type="button">NWEN200</button>
-                            </div>
-                            </div>
-                            
-                            
-                        </div>
-                        <div class="col-md-3 offset-md-2">
-                            <button class="btn btn-secondary" type="button" style="width:200px;">
-                                Send
-                            </button>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-    </header>
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-                </div>
-                <div class="modal-body">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Admin Name">
-                        <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Admin</button>-->
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+}
+.form-control2{
+	margin-left: 100px !important;
+	margin-top: -150px !important;
+}
+</style>
+		<div class="entry">
+			<div class="col-md-8 offset-md-2" style="margin-top: -1px;margin-left: 145px;">
+				<textarea class="form-control-2" rows="1" style="border-top-left-radius: 3px !important; border-top-right-radius: 3px !important;" placeholder="Enter the course here." required></textarea>
+				<div class="form-horizontal" style="margin-top: 46px; margin-left: -123px;">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<textarea class="form-control" rows="6" placeholder="Start typing here..." required></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="course_dropdown" style="height: 40px;width:726px;margin-left: 63px;margin-top: -15px">
+						<button class="btn btn-primary" type="submit" style="width:726px !important;border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-left-radius: 5px !important; border-bottom-right-radius: 5px !important;">Send</button>				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
 
 
-    <!-- jQuery -->
-    <!-- Bootstrap Core JavaScript -->
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+<!-- jQuery -->
+<!-- Bootstrap Core JavaScript -->
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
 </body>
 
 </html>
