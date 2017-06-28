@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ECS mobile app">
+    <meta name="author" content="Ben Watson, Reuben Lovell-Smith, Zoe Kraemer">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <title>Victoria - ECS</title>
+    <!-- Custom Fonts -->
+    <script src="https://use.fontawesome.com/329f50a5bf.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/2.4.2/respond.min.js"></script>
+      <![endif]-->
+    <style>
+        .btn-primary {
+            width: 258px !important;
+            margin: auto !important;
+        }
+
+        input[type=text] {}
+
+        a {
+            color: #e7e7e7 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            text-align: left !important;
+            margin-left: 100px !important;
+            margin-right: 100px !important;
+        }
+
+        h1 {
+            border-bottom: 1px solid #ffffff !important;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            border-bottom: thin solid #ffffff !important;
+            display: inline;
+        }
+        h3.a {
+            border-bottom: thin solid #ffffff !important;
+            
+        }
+
+        h3 {
+            font-size: 130%;
+            margin-left: 125px !important;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-left: 125px !important;
+            margin-right: 100px !important;
+            margin-bottom: 30px !important;
+	    margin-top: 12px !important;
+        }
+
+        .entry {
+            text-align: left;
+        }
+
+        nav {
+            color: #e7e7e7 !important;
+            background-color: #115737 !important;
+        }
+
+        header {
+            overflow: scroll;
+        }
+
+        .navbar-fixed-top {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+        }
+
+        .navbar-brand {
+            font-size: 170%;
+        }
+
+        .header-content-inner {
+            position: fixed;
+            width: 100%;
+            margin-top: 65px;
+            padding: 5px 5px;
+            text-align: left;
+        }
+	.not-active{
+		pointer-events: none;
+		color: #bab8b8 !important;
+	}
+    </style>
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-toggleable-md navbar-light navbar-fixed-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+        <a class="navbar-brand" href="login.html">Victoria</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link not-active" href="#">Courses</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="search-results.html">
+               <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
+            </form>
+            <form class="form-inline my-2 my-lg-0" action="login.html">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Login</button>
+            </form>
+        </div>
+    </nav>
+    <header>
+       
+        <!--<div class="container" style="padding: 100px;">
+                <div class="form-group row">
+                    <div class="col-12 form-inline justify-content-md-center">
+                        <input class="form-control" type="search" value="search..." size="60" style="height: 50px;" >
+                        <button type="button" class="btn" style="height: 50px;">Search</button>
+
+                    </div>
+
+                </div>
+            </div>-->
+       
+        <div class="header-content" style="margin-top: 236px;">
+            
+            <div class="entry">
+                <h1>
+                    Trending in ECS
+                </h1>
+                <h2>Swen 303</h2>
+                <p>This course addresses the design and engineering of user interfaces. It presents principles and guidelines for design and covers a range of design processes. It presents techniques for testing user interfaces, and considers a variety of user interface styles and interface devices.</p>
+                <h2>Swen 403</h2>
+                <p>This course expands on the material learnt in Swen 303, taking user experience design to another level. This course is taught by Dr James Noble and it a perfect follow on for those students wanting to pursue a career on UX.</p>
+            </div>
+
+            <div class="entry">
+                <h1>
+                    Starter Courses
+                </h1>
+                <h2>Comp 112</h2>
+                <p>This course introduces a range of important concepts and topics across Computer Science, Software Engineering and Network Engineering. Students will also gain a solid foundation of programming skills in object oriented programming. The course is an entry point to the BE(Hons) and BSc in Computer Science for students who already have basic programming skills.</p>
+                <h2>Cgra 151</h2>
+                <p>Introduces necessary background, fundamental concepts, and basic algorithms of Computer Graphics, including human visual perception, representation of colour and images, representation of 2D and 3D spaces, manipulation, movement and drawing of 2D and 3D objects. Students will use an appropriate modern programming language to investigate many of the ideas presented in the lectured material.</p>
+                
+                </div>
+                
+            </div>
+       
+  
+    </header>
+
+
+    <!-- jQuery -->
+    <!-- Bootstrap Core JavaScript -->
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+</body>
+
+</html>
+<!-- style stuff?
+			a {
+				color: #115737 !important;
+				font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+			}
+			a.current {
+				font-weight: bold !important;
+			}
+			a.navbar-brand {
+				font-family: Merriweather,'Helvetica Neue',Arial,sans-serif !important;
+			}
+			
+			a:active,
+			a:hover {
+				color: #228B22 !important;
+			}
+			header .header-content2 {
+				position: relative;
+				width: 100%;
+				padding: 50px 50px;
+				text-align: left;
+			}
+			tr.bg-primary {
+				background-color: #fff !important;
+			}
+			
+			-->
