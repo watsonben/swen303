@@ -52,8 +52,7 @@
         }
 
         h1 {
-            margin-top: 175px;
-            border-bottom: thin solid #ffffff !important;
+            border-bottom: 1px solid #ffffff !important;
             margin-bottom: 50px;
         }
 
@@ -76,6 +75,7 @@
             margin-left: 125px !important;
             margin-right: 100px !important;
             margin-bottom: 30px !important;
+	    margin-top: 12px !important;
         }
 
         .entry {
@@ -109,6 +109,10 @@
             padding: 5px 5px;
             text-align: left;
         }
+	.not-active{
+		pointer-events: none;
+		color: #bab8b8 !important;
+	}
     </style>
 </head>
 
@@ -121,14 +125,14 @@
         <a class="navbar-brand" href="login.html">Victoria</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link not-active" href="#">Courses</a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="forums_home.html">Forums</a>
-                </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="search.html">
+            <form class="form-inline my-2 my-lg-0" action="search-results.html">
                <input class="form-control mr-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Login</button>
@@ -148,37 +152,25 @@
                 </div>
             </div>-->
        
-        <div class="header-content" style="margin-top: 80px;">
+        <div class="header-content" style="margin-top: 236px;">
             
-            <!--<div class="entry">
-                <h2>
-                    <a href="announcements.html">News?</a>
-                </h2>
-                <h3>Latest:</h3>
-                <p>
-                    Announcement One - This is important! A thing happened in class! Omg.
-                </p>
-            </div>-->
-
             <div class="entry">
-                <h2>
-                    <a href="timetable.html">Trending in ECS</a>
-                </h2>
-                <h3 class="a"><a href="#">SWEN 303</a></h3>
+                <h1>
+                    Trending in ECS
+                </h1>
+                <h2>Swen 303</h2>
                 <p>This course addresses the design and engineering of user interfaces. It presents principles and guidelines for design and covers a range of design processes. It presents techniques for testing user interfaces, and considers a variety of user interface styles and interface devices.</p>
-                <h3 class="a"><a href="#">SWEN 303</a></h3>
-                <p>This course addresses the design and engineering of user interfaces. It presents principles and guidelines for design and covers a range of design processes. It presents techniques for testing user interfaces, and considers a variety of user interface styles and interface devices.</p>
-               
-            
+                <h2>Swen 403</h2>
+                <p>This course expands on the material learnt in Swen 303, taking user experience design to another level. This course is taught by Dr James Noble and it a perfect follow on for those students wanting to pursue a career on UX.</p>
             </div>
 
             <div class="entry">
-                <h2>
-                    <a href="assessments.html">Starter Courses</a>
-                </h2>
-                <h3 class="a"><a href="#">COMP 112</a></h3>
+                <h1>
+                    Starter Courses
+                </h1>
+                <h2>Comp 112</h2>
                 <p>This course introduces a range of important concepts and topics across Computer Science, Software Engineering and Network Engineering. Students will also gain a solid foundation of programming skills in object oriented programming. The course is an entry point to the BE(Hons) and BSc in Computer Science for students who already have basic programming skills.</p>
-                <h3 class="a"><a href="#">CGRA 151</a></h3>
+                <h2>Cgra 151</h2>
                 <p>Introduces necessary background, fundamental concepts, and basic algorithms of Computer Graphics, including human visual perception, representation of colour and images, representation of 2D and 3D spaces, manipulation, movement and drawing of 2D and 3D objects. Students will use an appropriate modern programming language to investigate many of the ideas presented in the lectured material.</p>
                 
                 </div>
