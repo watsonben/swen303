@@ -97,13 +97,13 @@ padding: 5px 5px;
 
 .not-active{
 	pointer-events: none;
-color: #b8b8b8 !important;
+	color: #b8b8b8 !important;
 }
 .btn-scroll{
 	background-color: Transparent !important;
-color: #e7e7e7;
-       background-repeat: no-repeat;
-border: none !important;
+	color: #e7e7e7;
+	background-repeat: no-repeat;
+	border: none !important;
 	outline-color: Transparent !important;
 }
 </style>
@@ -113,20 +113,20 @@ border: none !important;
 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
-<a class="navbar-brand" href="student_home.html">Victoria</a>
+<a class="navbar-brand" href="admin_home.html">Victoria</a>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item active">
-<a class="nav-link" href="student-courses.html">My Courses<span class="sr-only">(current)</span></a>
+<a class="nav-link" href="admin-courses.html">My Courses<span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="student-about.html">About</a>
+<a class="nav-link" href="admin-about.html">About Me</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="forums-home.html">Forums</a>
+<a class="nav-link" href="admin-forums-home.html">Forums</a>
 </li>
 </ul>
-<form class="form-inline my-2 my-lg-0" action="student-search-results.html">
+<form class="form-inline my-2 my-lg-0" action="admin-search-results.html">
 <input class="form-control mr-sm-2" type="text" placeholder="Search">
 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
 </form>
@@ -142,7 +142,7 @@ border: none !important;
 <button style="margin-top: -10px;" onclick="scroll_to_top()" class="btn btn-scroll"><span><i class="fa fa-2x fa-angle-up"></i></span></button>
 <script>
 function scroll_to_top(){
-	$(".entries").animate({scrollTop: "0px"});
+$(".entries").animate({scrollTop: "0px"});
 }
 </script>
 
@@ -187,7 +187,7 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
 <button style="margin-top: 660px;" onclick="scroll_to_bottom()" class="btn btn-scroll"><span><i class="fa fa-2x fa-angle-down"></i></span></button>
 <script>
 function scroll_to_bottom(){
-	$(".entries").animate({scrollTop: "700px"});
+$(".entries").animate({scrollTop: "700px"});
 }
 </script>
 </header>
@@ -197,7 +197,7 @@ function scroll_to_bottom(){
 <form>
 <div class="form-group">
 <textarea class="form-control" rows="5" id="body" placeholder="Start typing here..."></textarea>
-<button class="btn btn-primary" type="submit" onclick="#" style="margin-left: 795px !important; margin-bottom: -20px !important;">Submit comment</button>
+<button class="btn btn-primary" type="submit" style="margin-left: 795px !important; margin-bottom: -20px !important;">Submit comment</button>
 </div>
 </form>
 </div>
@@ -213,3 +213,30 @@ function scroll_to_bottom(){
 <script src="js/creative.js"></script>
 </body>
 </html>
+<!-- style stuff?
+a {
+color: #115737 !important;
+       font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+a.current {
+	font-weight: bold !important;
+}
+a.navbar-brand {
+	font-family: Merriweather,'Helvetica Neue',Arial,sans-serif !important;
+}
+
+a:active,
+	a:hover {
+color: #228B22 !important;
+	}
+header .header-content2 {
+position: relative;
+width: 100%;
+padding: 50px 50px;
+	 text-align: left;
+}
+tr.bg-primary {
+	background-color: #fff !important;
+}
+
+-->
