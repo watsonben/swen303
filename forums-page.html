@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ECS mobile app">
+<meta name="author" content="Ben Watson, Reuben Lovell-Smith, Zoe Kraemer">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<title>Victoria - ECS</title>
+<!-- Custom Fonts -->
+<script src="https://use.fontawesome.com/329f50a5bf.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- Plugin CSS -->
+<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/creative.css" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/2.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+.btn-primary { 	border-radius: 4px; 	color: #e7e7e7; 	text-align: center; 	width: 240px !important; 	margin-left: 0px !important; 	margin-right: 0px !important; }
+
+input[type=text]{
+}
+
+a{
+color: #e7e7e7 !important;
+}
+
+h1, h2, h3, p{ 	
+	text-align: left !important;
+	margin-left: 100px !important;
+	margin-right: 100px !important;
+} 
+
+h1{
+	margin-top:51px;
+	border-bottom: thin solid #ffffff !important;
+	font-size: 60.3333px !important;
+}
+
+h2{
+	border-bottom: thin solid #ffffff !important;
+display: inline;
+} 
+
+h3{
+	font-size: 130%;
+	margin-left: 100px !important;
+	margin-top: 15px;
+}
+
+p{ 	
+	margin-left: 125px !important; 	
+	margin-right: 100px !important;
+	margin-bottom: 30px !important;
+}
+
+.entry{
+	text-align: left;
+}
+
+nav{
+color: #e7e7e7 !important;
+       background-color: #115737 !important;
+}
+
+header{
+overflow: scroll;
+}
+
+.navbar-fixed-top{
+position: fixed;
+width: 100%;
+top: 0;
+     z-index: 1;
+}
+
+.navbar-brand {
+	font-size: 170%;
+}
+
+.header-content-inner {
+position: fixed;
+width: 100%;
+       margin-top: 65px;
+padding: 5px 5px;
+	 text-align: left;
+}
+
+.not-active{
+	pointer-events: none;
+	color: #b8b8b8 !important;
+}
+.btn-scroll{
+	background-color: Transparent !important;
+	color: #e7e7e7;
+	background-repeat: no-repeat;
+	border: none !important;
+	outline-color: Transparent !important;
+}
+</style>
+</head>
+<body id="page-top">
+<nav class="navbar navbar-toggleable-md navbar-light navbar-fixed-top">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="student_home.html">Victoria</a>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="student-courses.html">My Courses<span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="student-about.html">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="forums-home.html">Forums</a>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0" action="student-search-results.html">
+<input class="form-control mr-sm-2" type="text" placeholder="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
+</form>
+<form class="form-inline my-2 my-lg-0" action="login.html">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Logout</button>
+</form>
+</div>
+</nav>
+<header>
+<div class="header-content">
+<div  class="tab" id="swen">
+<h1>Entry title</h1>
+<button style="margin-top: -10px;" onclick="scroll_to_top()" class="btn btn-scroll"><span><i class="fa fa-2x fa-angle-up"></i></span></button>
+<script>
+function scroll_to_top(){
+$(".entries").animate({scrollTop: "0px"});
+}
+</script>
+
+<div class="entries" id="entries" style="overflow: scroll !important; height: 410px; margin-bottom: 10px;">
+<div class="entry">
+
+<h3>User1 said:</h3>
+<p>
+This is the most recent post that is in this topic. It has a character limit of 5000 and can pretty much be as extensive as the user decides they want it to be (short of 5000 characters obviously). This can make the threads very long, however, it's handled with scroll-to-top and scroll-to-bottom buttons.
+</p>
+</div>
+
+<div class="entry">
+<h3>User2 said:</h3>
+<p>
+Okay, so what do we fill the rest of the entries with? I hear you ask. Well... Fake latin!
+</p>
+</div>
+
+<div class="entry">
+<h3>User 1 said:</h3>
+<p>
+Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+</p>
+</div>
+<div class="entry">
+<h3>User2 said:</h3>
+<p>
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+</p>
+</div>
+
+<div class="entry">
+<h3>User 1 said:</h3>
+<p>
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+</p>
+</div>
+</div>
+</div>
+</div>
+<button style="margin-top: 660px;" onclick="scroll_to_bottom()" class="btn btn-scroll"><span><i class="fa fa-2x fa-angle-down"></i></span></button>
+<script>
+function scroll_to_bottom(){
+$(".entries").animate({scrollTop: "700px"});
+}
+</script>
+</header>
+<nav class="navbar navbar-light fixed-bottom">
+<a class="navbar-brand" href="#new-topic" data-toggle="collapse">+Comment</a>
+<div class="collapse" id="new-topic">
+<form>
+<div class="form-group">
+<textarea class="form-control" rows="5" id="body" placeholder="Start typing here..."></textarea>
+<button class="btn btn-primary" type="submit" style="margin-left: 795px !important; margin-bottom: -20px !important;">Submit comment</button>
+</div>
+</form>
+</div>
+</nav>
+
+<!-- jQuery -->
+<!-- Bootstrap Core JavaScript -->
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+</body>
+</html>
+<!-- style stuff?
+a {
+color: #115737 !important;
+       font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+a.current {
+	font-weight: bold !important;
+}
+a.navbar-brand {
+	font-family: Merriweather,'Helvetica Neue',Arial,sans-serif !important;
+}
+
+a:active,
+	a:hover {
+color: #228B22 !important;
+	}
+header .header-content2 {
+position: relative;
+width: 100%;
+padding: 50px 50px;
+	 text-align: left;
+}
+tr.bg-primary {
+	background-color: #fff !important;
+}
+
+-->
