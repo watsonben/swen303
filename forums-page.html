@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ECS mobile app">
+<meta name="author" content="Ben Watson, Reuben Lovell-Smith, Zoe Kraemer">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<title>Victoria - ECS</title>
+<!-- Custom Fonts -->
+<script src="https://use.fontawesome.com/329f50a5bf.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- Plugin CSS -->
+<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/creative.css" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/2.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+input[type=email], input[type=password]{
+width: 258px !important;
+margin: auto !important;
+}
+
+input[type=text]{
+}
+
+a{
+color: #e7e7e7 !important;
+}
+
+h1, h2, h3, h4, p, span { 	
+	text-align: left !important;
+	margin-left: 100px !important;
+	margin-right: 100px !important;
+} 
+
+h4 {
+	margin-left: 110px !important;
+	margin-right: 100px !important;
+	margin-bottom: 50px !important;
+	font-size: 16px !important;
+}
+
+h3 {
+	margin-top: 10px !important;
+	margin-left: 110px !important;
+	margin-right: 100px !important;
+	font-size: 22px !important;
+}
+
+h2 {
+	margin-top: 40px;
+	border-bottom: thin solid #ffffff !important;
+display: inline;
+}
+
+h1{
+	margin-top: 30px;
+	border-bottom: thin solid #f7f7f7 !important;
+	margin-bottom: 50px !important;
+	font-size: 60.3333px !important;
+} 
+
+p {
+
+	margin-left: 125px !important;
+	margin-right: 100px !important;
+	margin-bottom: 10px !important;
+}
+
+nav{
+color: #e7e7e7 !important;
+       background-color: #115737 !important;
+}
+
+header{
+overflow: scroll;
+}
+
+.entry {
+	text-align: left;
+}
+
+
+
+.navbar-brand {
+	font-size: 170%;
+}
+
+.check{
+width: 12px;
+position: relative;
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	  margin-left: -114px;
+	  margin-right: 7px;
+height: 12px;
+top: 0;
+left: 0;
+      border-radius: 4px;
+      box-shadow: none;
+}
+
+input[type=password]{
+	margin-top: 5px !important;
+}
+
+</style>
+</head>
+<body id="page-top">
+<nav class="navbar navbar-toggleable-md navbar-light navbar-fixed-top">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="student_home.html">Victoria</a>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="student-courses.html">My Courses<span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="student-about.html">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="forums-home.html">Forums</a>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0" action="student-search-results.html">
+<input class="form-control mr-sm-2" type="text" placeholder="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Search</button>
+</form>
+<form class="form-inline my-2 my-lg-0" action="login.html">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e7e7e7">Logout</button>
+</form>
+</div>
+</nav>
+
+<nav class="navbar navbar-light bg-faded sticky-top">
+<div class="header-content2">
+<button class="btn btn-primary my-2 my-sm-0" type="submit" style="color: #e7e7e7; font-size: 20px;">&#8678;</button>
+<a class="navbar-brand">Topic</a>
+<button class="btn btn-primary my-2 my-sm-0 pull-right" type="submit" style="color: #e7e7e7">Jump to top</button>
+</div>
+</nav>
+
+<header>
+<style>
+.header-content {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+a.button {
+	-webkit-appearance: button;
+	-moz-appearance: button;
+appearance: button;
+
+	    text-decoration: none;
+color: initial;
+}
+.btn-primary {
+color: #e7e7e7;
+       text-align: center;
+       margin-left: 0px !important;
+       margin-right: 0px !important;
+}
+</style>
+<div class="header-content">
+<h3>User1:</h3>
+<p>Morbi non mi commodo, varius magna nec, elementum felis. Curabitur non aliquet purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis sodales velit in porta. Nulla facilisi. Mauris et condimentum mi. Curabitur odio justo, ullamcorper ac aliquam non, gravida et tortor.</p>
+<h4>Posted at 4:03am on April 2nd 2017</h4>
+
+<h3>User2:</h3>
+<p>Nulla facilisi.</p>
+<h4>Posted at 4:08am on April 2nd 2017</h4>
+
+<h3>User3:</h3>
+<p>Mauris et condimentum mi. Curabitur odio justo, ullamcorper ac aliquam non, gravida et tortor. Nulla facilisi.</p>
+<h4>Posted at 6:29am on April 2nd 2017</h4>
+
+<h3>User1:</h3>
+<p>Ut fermentum sit amet leo a volutpat. Pellentesque facilisis felis quis velit tempor vulputate. Praesent et velit vel neque tincidunt aliquam facilisis ut nunc.</p>
+<h4>Posted at 11:57am on April 2nd 2017</h4>
+
+<h3>User1:</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex earius sed in purus.</p>
+<h4>Posted at 4:20am on April 3rd 2017</h4>
+</div>
+</header>
+
+<nav class="navbar navbar-light bg-faded fixed-bottom">
+<div class="input-group">
+<input class="form-control mr-sm-2" type="text" placeholder="Reply to Title">
+<button class="btn btn-primary" type="submit">Send</button>
+<button class="btn btn-primary" type="submit">Jump to bottom</button>
+</div>
+</nav>
+
+<script type="text/javascript">
+function openTab(name){
+	var swen = document.getElementById("swen");
+	var crse = document.getElementById("crse");
+	var thng = document.getElementById("thng");
+	if(name == 'swen'){
+		crse.style.display = "none";
+		crse.disabled = true;
+		thng.style.display = "none";
+		thng.disabled = true;
+		swen.disabled = false;
+		swen.style.display = 'block';
+	}
+	else if(name == 'crse'){
+		swen.style.display = "none";
+		swen.disabled = true;
+		thng.style.display = "none";
+		thng.disabled = true;
+		crse.disabled = false;
+		crse.style.display = 'block';
+	}
+	else{
+		crse.style.display = "none";
+		crse.disabled = true;
+		swen.style.display = "none";
+		swen.disabled = true;
+		thng.disabled = false;
+		thng.style.display = 'block';
+	}
+}
+</script>
+<!-- jQuery -->
+<!-- Bootstrap Core JavaScript -->
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+</body>
+</html>
